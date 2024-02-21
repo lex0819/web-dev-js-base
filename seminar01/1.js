@@ -12,7 +12,3 @@
 
 Уточнение: пользователь всегда вводит корректное число.
 */
-
-const temperatureCelsius = prompt('Enter Celsius temperature:', 0);
-const temperatureFahrenheit = (temperatureCelsius * 9) / 5 + 32;
-alert(`Цельсий: ${temperatureCelsius}, Фаренгейт: ${temperatureFahrenheit}`);
