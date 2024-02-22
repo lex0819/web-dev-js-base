@@ -6,3 +6,6 @@
 из переменной name.
 Вывести значение переменной admin в консоль.
 */
+const myName = 'Oksana';
+const admin = myName;
+console.log(`admin is called ${admin}`);
