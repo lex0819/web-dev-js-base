@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Создать переменные positive и negative, в которые пользователь вводит с 
@@ -13,4 +13,16 @@
 в консоль "Одно или более значений некорректно.".
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const positive = +prompt('Enter positive number:');
+const negative = +prompt('Enter negative number:');
+
+if (
+    !Number.isNaN(positive) &&
+    positive > 0 &&
+    !Number.isNaN(negative) &&
+    negative < 0
+) {
+    alert('All numbers are right');
+} else {
+    alert('One or more numbers are incorrectly.');
+}

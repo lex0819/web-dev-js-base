@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Необходимо создать переменную dayNumber, в которую пользователь должен ввести 
@@ -14,4 +14,20 @@
 число 32.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const dayNumber = +prompt('Emter integer in the range [1, 32)');
+
+if (!Number.isNaN(dayNumber) && dayNumber >= 1 && dayNumber < 32) {
+    let periodOfMonth = 0;
+
+    if (dayNumber < 11) {
+        periodOfMonth = 1;
+    } else if (dayNumber < 21) {
+        periodOfMonth = 2;
+    } else {
+        periodOfMonth = 3;
+    }
+
+    console.log(`Number ${dayNumber} is in ${periodOfMonth} period of month`);
+} else {
+    console.log('Your enter is incorrectly.');
+}

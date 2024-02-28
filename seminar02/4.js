@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Необязательное задание.
@@ -23,4 +23,21 @@
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const myNumber = prompt('Enter integer:');
+const myInteger = Number.parseInt(myNumber);
+
+if (!Number.isNaN(myInteger)) {
+    const decimalPlaces = [0, 0, 0];
+    let decPlace = myInteger;
+
+    for (let i = 0; i < myNumber.length; i++) {
+        decimalPlaces[i] = decPlace % 10;
+        decPlace = Math.trunc(decPlace / 10);
+    }
+
+    console.log(
+        `In the number ${myNumber} there are hundreds: ${decimalPlaces[2]}, tens: ${decimalPlaces[1]} and units: ${decimalPlaces[0]}.`
+    );
+} else {
+    console.log('Your enter is incorrect');
+}
