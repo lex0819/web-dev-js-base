@@ -16,7 +16,12 @@
 const positive = +prompt('Enter positive number:');
 const negative = +prompt('Enter negative number:');
 
-if (!isNaN(positive) && positive > 0 && !isNaN(negative) && negative < 0) {
+if (
+    !Number.isNaN(positive) &&
+    positive > 0 &&
+    !Number.isNaN(negative) &&
+    negative < 0
+) {
     alert('All numbers are right');
 } else {
     alert('One or more numbers are incorrectly.');

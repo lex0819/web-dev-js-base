@@ -24,14 +24,15 @@
 */
 
 const myNumber = prompt('Enter integer:');
-let myInteger = parseInt(myNumber);
+const myInteger = Number.parseInt(myNumber);
 
-if (!isNaN(myInteger)) {
+if (!Number.isNaN(myInteger)) {
     const decimalPlaces = [0, 0, 0];
+    let decPlace = myInteger;
 
     for (let i = 0; i < myNumber.length; i++) {
-        decimalPlaces[i] = myInteger % 10;
-        myInteger = Math.trunc(myInteger / 10);
+        decimalPlaces[i] = decPlace % 10;
+        decPlace = Math.trunc(decPlace / 10);
     }
 
     console.log(
