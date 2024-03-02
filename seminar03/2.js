@@ -9,16 +9,15 @@
 сообщение "Размер заработной платы за вычетом налогов равен N."
 */
 
-function getPayment(num) {
+function Payment(num) {
     const payment = num - num * 0.13;
     console.log(`Размер заработной платы за вычетом налогов равен ${payment}.`);
-    return payment;
 }
 
 const fullCost = +prompt('Введите размер заработной платы: ');
 
-if (!Number.isNaN(fullCost)) {
-    getPayment(fullCost);
+if (Number.isFinite(fullCost)) {
+    Payment(fullCost);
 } else {
     console.log('Значение задано неверно');
 }

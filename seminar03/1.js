@@ -8,7 +8,7 @@
 */
 
 function cubedNumber(num) {
-    return num * num * num;
+    return Math.pow(num, 3);
 }
 const numRandom = Math.floor(Math.random() * 100);
 console.log('numRandom', numRandom);

@@ -11,8 +11,7 @@
 */
 
 function getMaxNumber(num01, num02, num03) {
-    let maxNum = Math.max(num01, num02);
-    maxNum = Math.max(maxNum, num03);
+    const maxNum = Math.max(num01, num02, num03);
     console.log(
         `Максимальное значение среди чисел ${num01}, ${num02}, ${num03} равно ${maxNum}.`
     );
@@ -22,4 +21,4 @@ function getMaxNumber(num01, num02, num03) {
 const enterNumbers = prompt('Введите три числа через запятую: ');
 const listOfNumbers = enterNumbers.split(',');
 
-getMaxNumber(listOfNumbers[0], listOfNumbers[1], listOfNumbers[2]);
+getMaxNumber(+listOfNumbers[0], +listOfNumbers[1], +listOfNumbers[2]);
