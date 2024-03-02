@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Создайте функцию которая принимает число, возводит переданное число в куб и 
@@ -7,4 +7,9 @@
 который получаем от функции, в консоль.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function cubedNumber(num) {
+    return num * num * num;
+}
+const numRandom = Math.floor(Math.random() * 100);
+console.log('numRandom', numRandom);
+console.log('cubedNumber', cubedNumber(numRandom));

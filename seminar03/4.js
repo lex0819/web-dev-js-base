@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Необходимо реализовать четыре функции, каждая функция должна принимать по два
@@ -18,4 +18,41 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function addition(num1, num2) {
+    return Number(num1 + num2).toFixed(4);
+}
+
+function subtraction(num1, num2) {
+    if (num1 >= num2) {
+        return Number(num1 - num2).toFixed(4);
+    } else {
+        return Number(num2 - num1).toFixed(4);
+    }
+}
+
+function multiplication(num1, num2) {
+    return Number(num1 * num2).toFixed(4);
+}
+
+function division(num1, num2) {
+    if (num1 == 0 && num2 == 0) {
+        return 'Both number are 0!';
+    } else if (num1 == 0) {
+        return 0;
+    } else if (num2 == 0) {
+        return 0;
+    } else {
+        return Number(num1 / num2).toFixed(4);
+    }
+}
+
+const randomNum01 = +Number(Math.random() * 100).toFixed(2);
+console.log('randomNum01', randomNum01);
+
+const randomNum02 = +Number(Math.random() * 100).toFixed(2);
+console.log('randomNum02', randomNum02);
+
+console.log('addition', addition(randomNum01, randomNum02));
+console.log('subtraction', subtraction(randomNum01, randomNum02));
+console.log('multiplication', multiplication(randomNum01, randomNum02));
+console.log('division', division(randomNum01, randomNum02));

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Необходимо попросить пользователя ввести число.
@@ -9,4 +9,16 @@
 сообщение "Размер заработной платы за вычетом налогов равен N."
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+function getPayment(num) {
+    const payment = num - num * 0.13;
+    console.log(`Размер заработной платы за вычетом налогов равен ${payment}.`);
+    return payment;
+}
+
+const fullCost = +prompt('Введите размер заработной платы: ');
+
+if (!Number.isNaN(fullCost)) {
+    getPayment(fullCost);
+} else {
+    console.log('Значение задано неверно');
+}
