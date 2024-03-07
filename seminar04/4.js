@@ -1,4 +1,6 @@
-'use strict';
+=======
+"use strict";
+
 
 /*
 Необязательное задание. 
@@ -11,6 +13,8 @@ xxx
 xxxx
 xxxxx
 */
+
+
 const mood = 'x';
 
 for (let i = 1; i <= 20; i++) {
