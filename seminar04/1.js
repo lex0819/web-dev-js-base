@@ -13,11 +13,9 @@
 for (let index = 0; index < 11; index++) {
     if (index === 0) {
         console.log(`${index} - это ноль`);
-    }
-    if (index % 2 !== 0) {
-        console.log(`${index} - нечетное число`);
-    }
-    if (index > 0 && index % 2 === 0) {
+    } else if (index % 2 === 0) {
         console.log(`${index} - четное число`);
+    } else {
+        console.log(`${index} - нечетное число`);
     }
 }
