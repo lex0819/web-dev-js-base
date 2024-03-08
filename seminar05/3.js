@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя
@@ -9,18 +9,22 @@
 */
 
 const products = [
-  {
-    id: 3,
-    price: 200,
-  },
-  {
-    id: 4,
-    price: 900,
-  },
-  {
-    id: 1,
-    price: 1000,
-  },
+    {
+        id: 3,
+        price: 200,
+    },
+    {
+        id: 4,
+        price: 900,
+    },
+    {
+        id: 1,
+        price: 1000,
+    },
 ];
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+products.forEach((elem) => {
+    elem.price = (elem.price * (100 - 15)) / 100;
+});
+
+console.log(products);
