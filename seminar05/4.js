@@ -34,7 +34,5 @@ const products04 = [
 const productsWithPhoto = products04.filter((elem) => elem.photos?.length > 0);
 console.log('there are photos', productsWithPhoto);
 
-products04.sort(function (a, b) {
-    return a.price - b.price;
-});
+products04.sort((a, b) => a.price - b.price);
 console.log('sort by price', products04);
